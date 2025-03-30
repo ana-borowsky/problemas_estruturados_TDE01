@@ -1,5 +1,3 @@
-package pilha;
-
 public class Pilha {
     private int capacidade;
     private int topo;

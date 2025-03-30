@@ -1,5 +1,3 @@
-package fila;
-
 public class Fila {
     private int primeiro;
     private int ultimo;
@@ -9,7 +7,7 @@ public class Fila {
 
     public Fila(int capacidade) {
         if (capacidade <= 0) {
-            System.out.println("Capacidade precisa ser maior que zero.");
+            System.out.println("Capacidade precisa ser maior que zero!");
             return;
         }
         this.capacidade = capacidade;
@@ -44,7 +42,7 @@ public class Fila {
 
     public int remove() {
         if (this.vazia()) {
-            System.out.println("Não é possível remover pois a fila está vazia");
+            System.out.println("Não é possível remover pois a fila está vazia.");
             return -1;
         }
 
@@ -63,14 +61,17 @@ public class Fila {
 
     public void imprime() {
         if (this.vazia()) {
-            System.out.println("Fila vazia!");
+            System.out.println("A fila está vazia.");
             return;
-        } else {
-        System.out.println("Exibindo a fila:");
-        for (int i = 0; i < tamanhoAtual; i++) {
+        }
+
+        System.out.println("Fila atual: ");
+
+        int i = 0;
+        while (i < tamanhoAtual) {
             int index = (primeiro + i) % capacidade;
             System.out.println(dados[index]);
-            }
+            i++;
         }
     }
 }
